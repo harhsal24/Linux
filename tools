@@ -26,6 +26,10 @@ nmcli
 
 nmcli device wifi list
 
+cdisk
+sudo cfdisk /dev/sda
+
+
 nmcli device wifi connect <SSID> password <password>
 
 nmcli device show <device>
