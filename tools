@@ -42,6 +42,25 @@ lsblk
 
 fdisk -l
 
+windows diskpart
+
+list disk
+list volume
+
+select disk <disk_number>
+
+DISKPART> list partition
+delete partition override 
+
+
+select volume <volume_number>
+
+create partition primary
+format fs=<file_system> quick
+Replace <file_system> with the desired file system (e.g., ntfs, fat32).
+
+  
+
 
 
 
