@@ -63,7 +63,20 @@ create partition primary
 format fs=<file_system> quick
 Replace <file_system> with the desired file system (e.g., ntfs, fat32).
 
-  
+  git clone <package git url>
+
+cd /<package name>
+
+makepkg -si
+
+common path cd /home/harsh/ 
+
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+nano PKGBUILD
+makepkg -si
+
 
 
 
