@@ -82,6 +82,21 @@ hyprland
 cd ~/.config/hypr/hyprland.conf
 cd /home/<current user>/.config/hypr/hyprland.conf
 
+vim
+
+Press Esc: This ensures you're in command mode, where you can enter commands.
+
+Save changes (if any):
+
+Type :w and press Enter to save changes without exiting. This command means "write" or "save".
+If you haven't made any changes or don't want to save them, you can skip this step.
+Exit Vim:
+
+Type :q and press Enter to quit Vim.
+If you've made changes and want to exit without saving, type :q! and press Enter. This command means "quit without saving".
+Save and exit in one step:
+
+If you want to save changes and exit Vim in one step, you can combine the commands: :wq and press Enter. This command means "write" (save) and "quit".
 
 
 
