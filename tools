@@ -69,7 +69,7 @@ cd /<package name>
 
 makepkg -si
 
-common path cd /home/harsh/ 
+common path cd /home/<current user>/microsoft-edge-stable-bin/ 
 
 sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
