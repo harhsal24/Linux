@@ -1,1 +1,47 @@
+iwctl
+
+sudo systemctl enable iwd
+sudo systemctl start iwd
+
+iwctl
+
+iwctl: Starts the interactive iwctl shell.
+
+device list: Lists all available wireless devices.
+
+station [device_name] scan: Scans for available Wi-Fi networks on the specified wireless device.
+
+station [device_name] get-networks: Lists all available Wi-Fi networks.
+
+station [device_name] connect [network_name]: Connects to the specified Wi-Fi network.
+
+station [device_name] show: Displays information about the current connection, including the IP address assigned to the device.
+
+exit: Exits the iwctl shell.
+
+ping google.com
+
+
+nmcli
+
+nmcli device wifi list
+
+nmcli device wifi connect <SSID> password <password>
+
+nmcli device show <device>
+
+systemctl enable NetworkManager
+systemctl start NetworkManager
+systemctl disable NetworkManager
+systemctl stop NetworkManager
+
+
+file system command
+
+lsblk
+
+fdisk -l
+
+
+
 
