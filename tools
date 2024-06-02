@@ -78,6 +78,12 @@ nano PKGBUILD
 makepkg -si
 
 
+hyprland
+cd ~/.config/hypr/hyprland.conf
+cd /home/<current user>/.config/hypr/hyprland.conf
+
+
+
 
 
 
