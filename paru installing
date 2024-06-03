@@ -35,6 +35,15 @@ pacman -Qe
 explict pkgs including deps
 pacman -Qeq
 
+install to control brightness
+paru brightnessctl
+
+increase brightness
+brightnessctl s +5%
+
+decrease brightness
+brightnessctl s 5%-
+
 
 
 
