@@ -82,6 +82,12 @@ hyprland
 cd ~/.config/hypr/hyprland.conf
 cd /home/<current user>/.config/hypr/hyprland.conf
 
+path for share config
+/usr/share/hyprland/hyprland.conf
+
+reload the conf
+hyprctl reload
+
 vim
 :w !sudo tee % write with sudo
 Press Esc: This ensures you're in command mode, where you can enter commands.
