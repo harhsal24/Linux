@@ -7,3 +7,6 @@ makepkg -si
 
 installing sddm corner
 paru sddm-theme-corners-git
+
+themes are located in 
+/usr/share/sddm/themes/
