@@ -11,6 +11,9 @@ paru sddm-theme-corners-git
 themes are located in 
 /usr/share/sddm/themes/
 
+sddm config file in
+/etc/sddm.conf
+
 enable a service
 sudo systemctl enable sddm.service
 start a service
