@@ -11,6 +11,9 @@ paru sddm-theme-corners-git
 themes are located in 
 /usr/share/sddm/themes/
 
+set default display manager
+sudo update-alternatives --set default-displaymanager /usr/lib/X11/displaymanagers/sddm
+
 sddm config file in
 /etc/sddm.conf
 
