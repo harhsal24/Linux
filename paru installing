@@ -21,3 +21,8 @@ enable a service
 sudo systemctl enable sddm.service
 start a service
 sudo systemctl start sddm.service
+
+
+uninstalling pkg from arch linux
+sudo pacman -R xorg-xbacklight
+
