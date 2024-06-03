@@ -26,3 +26,15 @@ sudo systemctl start sddm.service
 uninstalling pkg from arch linux
 sudo pacman -R xorg-xbacklight
 
+list installed pkgs
+pacman -Q
+
+explict pkgs excluding deps
+pacman -Qe
+
+explict pkgs including deps
+pacman -Qeq
+
+
+
+
