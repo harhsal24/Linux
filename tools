@@ -83,7 +83,7 @@ cd ~/.config/hypr/hyprland.conf
 cd /home/<current user>/.config/hypr/hyprland.conf
 
 vim
-
+:w !sudo tee % write with sudo
 Press Esc: This ensures you're in command mode, where you can enter commands.
 
 Save changes (if any):
