@@ -18,3 +18,11 @@ groups <username>
 
 userdel -r username
 
+go in 
+su -
+vim /etc/sudoers
+
+uncomments 
+%wheel all=all
+:w! save the file
+:qa! exit without changes saved
