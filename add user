@@ -1,3 +1,7 @@
 sudo useradd -m <username>
 sudo passwd <username>
 sudo usermod -aG wheel username
+
+
+chmod u+w filename  (Grants write permission to the file owner)
+Replace filename with the actual filename. You can replace u+w with g+w for the group or o+w for others (use with caution!).
