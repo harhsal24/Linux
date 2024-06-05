@@ -8,3 +8,10 @@ makepkg -si
 
 vim ~/.config 
 :w! to save a file
+
+git clone https://github.com/Frogging-Family/nvidia-all.git
+cd nvidia-all
+makepkg -si
+2
+1
+n
