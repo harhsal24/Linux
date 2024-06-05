@@ -1,0 +1,10 @@
+sudo pacman -Syu git vim firefox 
+
+#install paru
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+vim ~/.config 
+:w! to save a file
