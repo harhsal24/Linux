@@ -9,3 +9,7 @@ Replace filename with the actual filename. You can replace u+w with g+w for the 
 getent passwd list all user
 whoami
 who
+
+
+sudo pacman -S sudo
+sudo usermod -aG wheel <username>
