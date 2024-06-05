@@ -15,3 +15,6 @@ sudo pacman -S sudo
 sudo usermod -aG wheel <username>
 su - <username> to change user
 groups <username>
+
+userdel -r username
+
