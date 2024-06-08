@@ -39,3 +39,31 @@ gestures {
     workspace_swipe = true
     workspace_swipe_fingers = 3
 }
+
+fix blury edge in hyprland
+https://www.reddit.com/r/hyprland/comments/19crkzq/solved_microsoft_edge_blurry_displayscaling_issue/?rdt=39410
+ 
+1.Create the Launch Script:
+Create a launch script for microsoft-edge-stable or any other browser.
+
+nano launch-edge.sh
+
+ Add the following lines:
+
+#!/bin/bash
+/usr/bin/microsoft-edge-stable --ozone-platform=wayland "$@"
+
+ Find the Desktop Entry:
+Locate the Edge desktop entry file (microsoft-edge.desktop or .desktop file for your browser):
+
+find ~/.local/share/applications /usr/share/applications -name '*edge*.desktop'
+ Note the path to the file.
+
+open with root user su -
+Update the Desktop Entry:
+Open the desktop entry file:
+nano /path/to/microsoft-edge.desktop
+Update the Exec line to use your custom launcher script:
+Exec=/path_to_your_script/launch-edge.sh %U
+
+
