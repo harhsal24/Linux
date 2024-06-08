@@ -66,4 +66,9 @@ nano /path/to/microsoft-edge.desktop
 Update the Exec line to use your custom launcher script:
 Exec=/path_to_your_script/launch-edge.sh %U
 
+Installing waybar
+sudo pacman -Sy waybar
+
+
+
 
