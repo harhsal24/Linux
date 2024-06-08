@@ -68,6 +68,8 @@ Exec=/path_to_your_script/launch-edge.sh %U
 
 Installing waybar
 sudo pacman -Sy waybar
+to start waybar  
+to reload hyprland hyprctl reload
 
 
 
