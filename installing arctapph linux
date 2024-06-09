@@ -1,0 +1,98 @@
+from window shrik a drive to make partation of unallocated space to install arch linux
+
+download arch iso from https://archlinux.org/download/
+and choose region india by <C-f>
+create bootable pendrive and go into bios by tapping f2 as starting laptop
+
+disable secure boot and also disable windows bit locker encryption maybe also disable fast boot
+use iwctl to connect to wifi or ethernet
+check using ping google.com
+-iwctl
+-device list
+-device wlan0 scan
+-device wlan0 show
+-station wlan0 connect <wifiName> //press enter and type password for wifi
+if sucessfully connect type exit to exit from iwctl-
+and check via ping 
+
+-pacman -Syu
+-pacman -Sy archlinux-keyring
+-lsblk //to view the ssds and pendrive connect to system
+-fdisk -l // to get the info about the storage that you want to install arch linux
+
+create /mnt /boot for arch linux from unallocted space
+use cfdisk /dev/<name of storage device form lsblk> //like nvme0n1 ,nvme1n1 --this are  based on slot on the motherboard
+
+Time to create the partation from free space which is unallocated
+create uefi partation from free space
+-eg: Partition size: 800M //800mb for uefi press enter key to create it
+then change the Type -> EFI System
+
+create partation for linux from free space
+-eg: Partition size: 180G //180 gb
+then change the Type -> Linux file system
+
+#skip if using archinstall
+//create partation for swap form free space
+//then change the Type -> Linux Swap
+
+Write the change and type yes
+and exit cfdisk
+note: remeber the partation number of nvme_n_p_ of efi,mnt,swap
+
+check the newly create partation 
+-lsblk
+
+Time to format the partation
+partation are created now fomat them 
+-mkfs.fat -F32 /dev/nvme_n_p_ // uefi
+
+-mkfs.ext4 /dev/nvme_n_p_ //root , mnt 
+
+#skip if using archinstall
+//-mkswap /dev/nvme_n_p_  // swap 
+
+Time to mount the partation
+mount the root partaton
+-mount /dev/nvme_n_p /mnt       //nvme_n_p is root,mnt which is biggest in storage size
+-mkdir /mnt/boot
+-mount /dev/nvme_n_p /mnt/boot //nvme_n_p is boot partation here i.e uefi 
+
+#skip if using archinstall
+-swapon /dev/nvme_n_p          //nvme_n_p is swap partation enable it virtual ram
+
+veryfiy the partaion are mounted properly use
+-lsblk
+
+Time to install the arch linux 
+-archistall
+In disk configuration 
+-pre-mounted configuration->
+Enter the root dir of mounted devices : /mnt
+
+choose mirror
+set the root password 
+set the usr with sudo access
+
+Time to install the grub in boot partation in chroot env
+-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+-grub-mkconfig -o /boot/grub/grub.cfg 
+exit from chroot env
+
+-shutdown now //remove the bootable pendrive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
