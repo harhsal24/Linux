@@ -2,6 +2,8 @@
 fan control install 
 https://gitlab.com/asus-linux/asusctl/-/tree/main/rog-control-center
 
+-sensors
+
 
 pacman -Syu ->
 failed to synchronize all databases (unable to lock database)
