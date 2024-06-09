@@ -1,0 +1,5 @@
+pacman -Syu ->
+failed to synchronize all databases (unable to lock database)
+
+https://forum.manjaro.org/t/synchronizing-package-databases-unable-to-lock-database-failed-to-synchronize-databases/122595/3
+sudo rm /var/lib/pacman/db.lck
